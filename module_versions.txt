@@ -1,0 +1,17 @@
+certifi: 2024.7.4
+charset-normalizer: 3.3.2
+idna: 3.7
+lxml: 5.2.2
+numpy: 2.0.1
+opencv-python: 4.10.0.84
+pip: 24.2
+prettytable: 3.10.2
+python-dateutil: 2.9.0.post0
+pytz: 2024.1
+pyzbar: 0.1.9
+requests: 2.32.3
+six: 1.16.0
+tzdata: 2024.1
+urlilb3: 2.2.2
+wcwidth: 0.2.13
+webencodings: 0.5.1
