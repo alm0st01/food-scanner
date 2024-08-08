@@ -2,9 +2,12 @@ import json
 from prettytable import PrettyTable
 from tools import extratools
 
+json_root = "food-scanner/userdata/food.json"
+
+
 def export_to_json(product_dict: dict):
     try:
-        with open("userdata/food.json", "r", encoding='utf-8') as file:
+        with open(json_root, "r", encoding='utf-8') as file:
             jdata = json.load(file)
     except json.JSONDecodeError:
         jdata = dict({})
@@ -14,7 +17,7 @@ def export_to_json(product_dict: dict):
         else:
             jdata[key] = value
 
-    with open("userdata/food.json", "w", encoding='utf-8') as file:
+    with open(json_root, "w", encoding='utf-8') as file:
         json.dump(jdata, file, ensure_ascii=False, indent=4)
 
 
@@ -22,7 +25,7 @@ class viewer_gui:
     def __init__(self):
         self.item_count = 0
 
-        with open("userdata/food.json", "r", encoding='utf-8') as file:
+        with open(json_root, "r", encoding='utf-8') as file:
             self.jdata = json.load(file)
         for key, value in self.jdata.items():
             for i in value.items():
