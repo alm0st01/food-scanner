@@ -29,7 +29,9 @@ class viewer_gui:
         for key, value in self.jdata.items():
             for i in value.items():
                 self.item_count += 1
-        self.pages = self.item_count//5 + 1
+
+        page_factor = 0.0000000001
+        self.pages = int(self.item_count//(5+page_factor)) + 1
         self.curr_page = -1
         self.on_list = False
         self.page_list = {}
